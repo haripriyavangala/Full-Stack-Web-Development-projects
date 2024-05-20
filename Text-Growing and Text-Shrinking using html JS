@@ -1,0 +1,34 @@
+<!-- text growing and shrinking -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>growing and shrinking</title>
+</head>
+<body>
+  <p id="1">Text-Growing</p>
+  <script>
+   const element=document.getElementById("1");
+   let f=5;
+   let size=18;
+   element.style.color="blue";
+   setInterval(()=>{
+     size+=f;
+     element.style.fontSize=size+"pt";
+     
+     if(size>=50)
+     {
+       f=-1*f;
+       element.innerHTML="TEXT_SHRINKING";
+       element.style.color="red";
+     }
+     if(size<5)
+     {
+       f=-1*f;
+       element.innerHTML="TEXT_GROWING";
+       element.style.color="blue";
+     }
+   },1000);
+  </script>
+</body>
+</html> 
