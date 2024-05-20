@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Toggle Background</title>
+        <style>
+            div{
+                background:blue;
+                height:100px;
+                width:200px;
+            }
+            div.contextmenu{
+                background:red;
+                height:100px;
+                width:200px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div></div>
+        <p>Right Click to change the Background</p>
+        <script>
+            var div=$("div").first();
+            div.on("contextmenu",function(){
+                div.toggleClass("contextmenu");
+            });
+        </script>
+    </body>
+</html>
