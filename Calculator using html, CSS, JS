@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 0 auto;
+        }
+        table{
+            margin:0 auto;
+        }
+        input, button{
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="text" id="num1" placeholder="number1"></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="num2" placeholder="number2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calculate('sum')">+</button>
+                <button onclick="calculate('difference')">-</button>
+                <button onclick="calculate('product')">*</button>
+                <button onclick="calculate('quotient')">/</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h3>Result : <span id="result">0</span></h3>
+
+    <script>
+        function isNumeric(value) {
+            return /^[0-9]+$/.test(value);
+        }
+
+        function validateNumberInput(inputId) {
+            var input = document.getElementById(inputId);
+            var value = input.value.trim();
+            if (!isNumeric(value)) {
+                alert('Please enter a valid number for ' + inputId);
+                input.value = '';
+                return false;
+            }
+            return true;
+        }
+
+        function calculate(operation) {
+            if (!validateNumberInput('num1') || !validateNumberInput('num2')) {
+                return;
+            }
+
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var resultElement = document.getElementById('result');
+            var result;
+
+            switch (operation) {
+                case 'sum':
+                    result = num1 + num2;
+                    break;
+                case 'difference':
+                    result = num1 - num2;
+                    break;
+                case 'product':
+                    result = num1 * num2;
+                    break;
+                case 'quotient':
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert('Cannot divide by zero');
+                        result = 'undefined';
+                    }
+                    break;
+                default:
+                    result = "Invalid operation";
+            }
+
+            resultElement.innerText = result;
+        }
+    </script>
+</body>
+</html>
