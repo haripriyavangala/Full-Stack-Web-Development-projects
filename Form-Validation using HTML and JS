@@ -1,0 +1,136 @@
+<!-- formvalidation -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+	<h1 align="center">Registration Form</h1>
+	<table align="center">
+		<form name="registration" onSubmit="return validate()">
+			<tr>
+				<td><label for="fn">First Name : </label></td>
+				<td><input type="text" id="fn" name="fname"></td>
+			</tr>
+			<tr>
+				<td><label for="ln">Last Name : </label></td>
+				<td><input type="text" id="ln" name="lname"></td>
+			</tr>
+			<tr>
+				<td><label for="dob">DOB : </label></td>
+				<td><input type="date" id="dob" name="dob"></td>
+			</tr>
+			<tr>
+				<td><label for="branch">Name of Branch : </label></td>
+				<td>
+					<select id="branch" name="op">
+						<option>Select your Branch</option>
+						<option value="cse">CSE</option>
+						<option value="csd">CSD</option>
+						<option value="cai">CAI</option>
+						<option value="csc">CSC</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Gender : </label></td>
+				<td>
+					<input type="radio" name="gender" value="male">
+					<label for="male">Male</label>
+
+					<input type="radio" name="gender" value="female">
+					<label for="female">Female</label>	
+				</td>
+			</tr>
+			<tr>
+				<td>Programming Languages : </td>
+				<td>
+					<input type="checkbox" name="c" id="c" value="c">
+					<label for="c">C</label>
+				
+					<input type="checkbox" name="cplus" id="cplus" value="cplus">
+					<label for="cplus">C++</label>
+
+					<input type="checkbox" name="j" id="j" value="cplus">
+					<label for="j">Java</label>
+
+					<input type="checkbox" name="p" id="p" value="p">
+					<label for="p">Python</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Address : </td>
+				<td><textarea rows="5" name="add"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="e">Email</label></td>
+				<td><input type="emal" id="e" name="e"></td>
+			</tr>
+			<tr>
+				<td><label for="pass">Password</label></td>
+				<td><input type="password" id="pass" name="pass">
+			</tr>
+			<tr>
+				<td><label for="resume">Resume : </label></td>
+				<td><input type="file" id="resume" name="resume"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="Submit"></td>
+				<td><input type="reset" name="Reset"</td>
+			</tr>
+		</form>
+	</table>
+	<script>
+			function validate()
+			{
+			var fname=document.registration.fname;
+			var lname=document.registration.lname;
+			var gender=document.registration.gender;
+			var branch=document.registration.op;
+			var add=document.registration.add;
+			var c=document.registration.c;
+			var p=document.registration.p;
+			var j=document.registration.j;
+			var cplus=document.registration.cplus;
+			var date=document.registration.dob;
+			console.log(gender.value);
+			if(fname.value.length<5 || fname.value.length>50)
+			{
+				alert("First Name Size can only be between 5 to 50 words");
+				return false;
+			}
+			else if(lname.value.length<5 || fname.value.length>50)
+			{
+					alert("Last Name Size can only be between 5 to 50 words");
+					return false;
+			}
+			else if(!date.value)
+			{
+				alert("Select your Date of Birth from Calendar");
+				return false;
+			}
+			else if(gender.value!="male" && gender.value!="female")
+			{
+				alert("Please Select your Gender");
+				return false;
+			}
+			else if(!(c.value!="c" || p.value!="p" || cplus.value!="cplus" || j.value!="j"))
+			{
+				alert("Choose any one language");
+				return false;
+			}
+			else if(!(branch.value!="cse" || branch.value!="csd" || branch.value!="cai" || branch.value!="csc"))
+			{
+				alert("Choose your Branch");
+				return false;
+			}
+			else
+			{
+				alert("You have Successfully Submitted the Form");
+			}
+			return true;
+}
+
+	</script>
+</body>
+</html> -->
