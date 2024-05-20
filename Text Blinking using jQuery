@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Text Blinking</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p id="blink-text">This is text blinking</p>
+        <script>
+        $(document).ready(function(){
+            setInterval(()=>{
+                $("#blink-text").fadeToggle(300);
+            },500);
+        });
+    </script>
+    </body>
+</html>
