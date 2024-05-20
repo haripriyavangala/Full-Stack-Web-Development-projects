@@ -35,8 +35,8 @@
 <script>
 var app = angular.module('myApp', []);
 app.controller('validateCtrl', function($scope) {
-  $scope.user = 'Jyothi Prakash';
-  $scope.email = '22695a3203@mits.ac.in';
+  $scope.user = 'Hari Priya Vangala';
+  $scope.email = '21691A3229@mits.ac.in';
 });
 </script>
 
